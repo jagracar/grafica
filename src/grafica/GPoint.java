@@ -212,6 +212,21 @@ public class GPoint {
 	public String getLabel() {
 		return label;
 	}
+	
+	/**
+	 * Returns the Euclidean distance from another point
+	 * 
+	 * @return the Euclidean distance from another point
+	 */
+	
+	public double getEDist(GPoint b){
+   	 	float x2 = b.getX();
+   	 	float y2 = b.getY();
+
+   		double result = Math.pow((x2 - x), 2) + Math.pow((y2 - y), 2);
+    	 	return Math.sqrt(result);
+		
+	}
 
 	/**
 	 * Returns if the point coordinates are valid or not
