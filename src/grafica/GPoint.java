@@ -203,7 +203,16 @@ public class GPoint {
 	public float getY() {
 		return y;
 	}
-
+	
+	/**
+	 * Returns the point in string format
+	 *
+	 * @return the point in string format
+	 */
+	publie string toString() {
+		String point = x + "," + y; 
+		return point;	
+	}
 	/**
 	 * Returns the point text label
 	 * 
