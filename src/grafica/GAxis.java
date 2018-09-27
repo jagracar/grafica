@@ -876,9 +876,9 @@ public class GAxis implements PConstants {
 		if (newNTicks >= 0) {
 			nTicks = newNTicks;
 			ticksSeparation = -1;
+			fixedTicks = false;
 
 			if (!log) {
-				fixedTicks = false;
 				updateTicks();
 				updatePlotTicks();
 				updateTicksInside();
@@ -894,9 +894,9 @@ public class GAxis implements PConstants {
 	 */
 	public void setTicksSeparation(float newTicksSeparation) {
 		ticksSeparation = newTicksSeparation;
+		fixedTicks = false;
 
 		if (!log) {
-			fixedTicks = false;
 			updateTicks();
 			updatePlotTicks();
 			updateTicksInside();

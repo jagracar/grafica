@@ -1922,10 +1922,10 @@ public class GLayer implements PConstants {
 	public void addPoint(int index, float x, float y, String label) {
 		points.add(index, x, y, label);
 		plotPoints.add(index, valueToXPlot(x), valueToYPlot(y), label);
-		inside.add(index, isInside(plotPoints.getLastPoint()));
+		inside.add(index, isInside(plotPoints.get(index)));
 
 		if (hist != null) {
-			hist.addPlotPoint(index, plotPoints.getLastPoint());
+			hist.addPlotPoint(index, plotPoints.get(index));
 		}
 	}
 
