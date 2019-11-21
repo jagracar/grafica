@@ -27,6 +27,7 @@
 
 package grafica;
 
+import java.util.Arrays;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PFont;
@@ -75,7 +76,7 @@ public class GAxisLabel implements PConstants {
 
 		text = "";
 		textAlignment = CENTER;
-		fontName = "SansSerif.plain";
+		fontName = Arrays.asList(PFont.list()).contains("SansSerif.plain")? "SansSerif.plain" : "SansSerif";
 		fontColor = this.parent.color(0);
 		fontSize = 13;
 		font = this.parent.createFont(fontName, fontSize);

@@ -27,6 +27,7 @@
 
 package grafica;
 
+import java.util.Arrays;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PFont;
@@ -70,7 +71,7 @@ public class GTitle implements PConstants {
 
 		text = "";
 		textAlignment = CENTER;
-		fontName = "SansSerif.bold";
+		fontName = Arrays.asList(PFont.list()).contains("SansSerif.bold")? "SansSerif.bold" : "SansSerif";
 		fontColor = this.parent.color(100);
 		fontSize = 13;
 		font = this.parent.createFont(fontName, fontSize);

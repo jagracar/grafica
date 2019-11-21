@@ -131,7 +131,7 @@ public class GAxis implements PConstants {
 		lab = new GAxisLabel(this.parent, this.type, this.dim);
 		drawAxisLabel = true;
 
-		fontName = "SansSerif.plain";
+		fontName = Arrays.asList(PFont.list()).contains("SansSerif.plain")? "SansSerif.plain" : "SansSerif";
 		fontColor = this.parent.color(0);
 		fontSize = 11;
 		font = this.parent.createFont(fontName, fontSize);

@@ -28,6 +28,7 @@
 package grafica;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PFont;
@@ -128,7 +129,7 @@ public class GLayer implements PConstants {
 
 		labelBgColor = this.parent.color(255, 200);
 		labelSeparation = new float[] { 7, 7 };
-		fontName = "SansSerif.plain";
+		fontName = Arrays.asList(PFont.list()).contains("SansSerif.plain")? "SansSerif.plain" : "SansSerif";
 		fontColor = this.parent.color(0);
 		fontSize = 11;
 		font = this.parent.createFont(fontName, fontSize);

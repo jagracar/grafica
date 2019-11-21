@@ -28,6 +28,7 @@
 package grafica;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PFont;
@@ -93,7 +94,7 @@ public class GHistogram implements PConstants {
 		labelsOffset = 8;
 		drawLabels = false;
 		rotateLabels = false;
-		fontName = "SansSerif.plain";
+		fontName = Arrays.asList(PFont.list()).contains("SansSerif.plain")? "SansSerif.plain" : "SansSerif";
 		fontColor = this.parent.color(0);
 		fontSize = 11;
 		font = this.parent.createFont(fontName, fontSize);
